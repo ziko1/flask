@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-08",
+  "baseline_sha": "6a7de0bd899bb605d309f474c0e72891e45bc1bf",
+  "scope": "Minimal server template",
+  "passed": 4,
+  "commands": [
+    ".venv/bin/python -m unittest -v",
+    ".venv/bin/gunicorn --check-config main:app"
+  ],
+  "limitations": [
+    "Product requirements and live deployment unspecified"
+  ],
+  "files_sha256": {
+    "main.py": "9868ba89de163c31788b10629e1cd1cb8cc9dec69db27c245bc9b8e33f0333df",
+    "requirements.txt": "8cb877b1675d8ed918db277df16b492e7ace74cea3c7beac57a65f4a4ef548e9",
+    "railway.json": "464f7f51aa3429131327f9ba06ae271527692acac87e7b6108a731a55b817dea",
+    "test_app.py": "acee2912be658ee92fdac4bc1341387ac1731e7068c70e6b7cc5ffde989f46c1"
+  },
+  "local_process_smoke": {
+    "status": 200,
+    "body": "{\"ok\":true,\"service\":\"flask-example\"}\n"
+  }
+}

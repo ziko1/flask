@@ -9,5 +9,10 @@ def index():
     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
 
+@app.get('/health')
+def health():
+    return jsonify({'ok': True, 'service': 'flask-example'})
+
+
 if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
+    app.run(host='127.0.0.1', debug=False, port=int(os.getenv('PORT', '5000')))
