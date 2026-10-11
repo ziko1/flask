@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "observedAtUtc": "2026-10-11T17:48:36.247Z",
+  "repository": "ziko1/flask",
+  "status": "BLOCKED",
+  "scope": "CI event routing, bounded jobs and dependency-download cache configuration",
+  "testedGitSha": "68fb12b4895fa3cbd4a98cab1a150dd4e1f72ca6",
+  "testedScope": "Source and GitHub workflow registration only; application tests at this SHA did not execute",
+  "baseGitSha": "4ff580b7a06131ec9102109f06c9ac9e33e1adb0",
+  "baseBranch": "fix/runtime-readiness-20261008",
+  "branch": "ci/balance-github-codemagic-20261011",
+  "pullRequest": "https://github.com/ziko1/flask/pull/2",
+  "configuration": {
+    "status": "PASS",
+    "path": ".github/workflows/ci.yml",
+    "blobSha": "f5dfd23e4d39b936f1a195c1ba1bb3031c7c309e",
+    "readbackByteIdentical": true,
+    "validation": {
+      "parser": "PyYAML 6.0.3 BaseLoader",
+      "environment": "Python 3.12.14",
+      "checks": [
+        "YAML parsed with on as a string key",
+        "branch pushes match only main",
+        "existing tag pushes retained",
+        "pull_request has no base-branch or path exclusion",
+        "manual trigger configured",
+        "existing job actions and run commands preserved",
+        "contents: read retained",
+        "obsolete verification cancellation enabled",
+        "timeout bounded"
+      ],
+      "manualDispatchAvailability": "GitHub dispatch requires the workflow to exist on the default branch; not yet merged"
+    }
+  },
+  "sourcePreservation": {
+    "status": "PASS",
+    "compareUrl": "https://github.com/ziko1/flask/compare/4ff580b7a06131ec9102109f06c9ac9e33e1adb0...68fb12b4895fa3cbd4a98cab1a150dd4e1f72ca6",
+    "changedPaths": [
+      ".github/workflows/ci.yml"
+    ],
+    "applicationDependenciesAndTestSources": "UNCHANGED"
+  },
+  "githubExecution": {
+    "status": "BLOCKED_ENVIRONMENT",
+    "reason": "Provider account-level execution restriction; no runner allocated and no test step executed",
+    "runs": [
+      {
+        "id": 38160743104,
+        "url": "https://github.com/ziko1/flask/actions/runs/38160743104",
+        "name": "Flask runtime checks",
+        "event": "pull_request",
+        "headSha": "68fb12b4895fa3cbd4a98cab1a150dd4e1f72ca6",
+        "status": "completed",
+        "conclusion": "failure",
+        "jobs": [
+          {
+            "id": 114532941773,
+            "name": "test",
+            "runnerId": 0,
+            "steps": [],
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      }
+    ]
+  },
+  "observedRouting": {
+    "pullRequestRuns": 1,
+    "branchPushRuns": 0,
+    "scope": "The recorded candidate creation and PR event only"
+  },
+  "historicalRuns": [
+    {
+      "id": 37840577908,
+      "url": "https://github.com/ziko1/flask/actions/runs/37840577908",
+      "headSha": "4ff580b7a06131ec9102109f06c9ac9e33e1adb0",
+      "event": "pull_request",
+      "scope": "Historical result for its own SHA only"
+    },
+    {
+      "id": 37840535646,
+      "url": "https://github.com/ziko1/flask/actions/runs/37840535646",
+      "headSha": "4ff580b7a06131ec9102109f06c9ac9e33e1adb0",
+      "event": "push",
+      "scope": "Historical result for its own SHA only"
+    }
+  ],
+  "codemagic": {
+    "configured": false,
+    "reason": "This public web/server project belongs on standard GitHub Linux runners; no native macOS requirement"
+  },
+  "productReadiness": "NOT_REASSESSED; existing completion-plan blockers remain",
+  "nextStep": "When hosted execution is restored, run the existing checks at the reviewed source before considering merge. No repeat was attempted against the known blocked provider."
+}
